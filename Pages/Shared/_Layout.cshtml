@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FinalProject</title>
+
+    <!-- ลิงก์ CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/_layout.cshtml.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/FinalProject.styles.css" asp-append-version="true" />
+</head>
+<body>
+<!-- Canvas สำหรับพื้นหลัง -->
+<canvas id="shooting-stars"></canvas>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-page="/Index">FinalProject</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted text-center">© 2024 FinalProject</p>
+    </div>
+</footer>
+
+<!-- ลิงก์ JS -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/script.js"></script> <!-- ลิงก์ JavaScript สำหรับดาวตก -->
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

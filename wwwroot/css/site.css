@@ -1,0 +1,47 @@
+/* site.css */
+
+/* สไตล์พื้นฐานของ Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.2); /* โปร่งใส */
+  backdrop-filter: blur(5px); /* เบลอ */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: white;
+}
+
+.navbar a {
+  color: white !important;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  background: rgba(255, 255, 255, 0.1); /* พื้นหลัง Footer */
+  color: white;
+  text-align: center;
+}
+
+/* ปุ่ม */
+.btn-primary {
+  background-color: #1b6ec2;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: green
+}

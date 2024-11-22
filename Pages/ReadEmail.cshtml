@@ -1,0 +1,53 @@
+﻿@page "/ReadEmail"
+@model ReadEmailModel
+@{
+    ViewData["Title"] = "Read Email";
+}
+
+<div class="container form-container">
+    <h3 class="text-center">@ViewData["Title"]</h3>
+
+    <!-- Sender -->
+    <div class="form-floating mb-3">
+        <input
+            id="recipient"
+            name="recipient"
+            type="email"
+            class="form-control input-field"
+            value="@Model.EmailSender"
+            readonly
+        />
+        <label for="recipient" class="input-label">From</label>
+    </div>
+
+    <!-- Subject -->
+    <div class="form-floating mb-3">
+        <input
+            id="subject"
+            name="subject"
+            type="text"
+            class="form-control input-field"
+            value="@Model.EmailSubject"
+            readonly
+        />
+        <label for="subject" class="input-label">Subject</label>
+    </div>
+
+    <!-- Message -->
+    <div class="form-floating mb-3">
+        <textarea
+            id="body"
+            name="body"
+            class="form-control input-field"
+            style="height: 150px;"
+            readonly
+        >@Model.EmailMessage</textarea>
+        <label for="body" class="input-label">Message</label>
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-flex justify-content-between">
+        <a href="/" class="btn btn-primary btn-custom">Back</a>
+        <a class="btn btn-primary btn-custom" href="/ComposeMail?Sender=@User.Identity.Name">Send back</a>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@page "/ComposeMail"
+@model ComposeMailModel
+@{
+    ViewData["Title"] = "Compose New Email";
+}
+
+<div class="container form-container">
+    <h3 class="text-center">@ViewData["Title"]</h3>
+
+    <form method="post" class="needs-validation" novalidate>
+        <!-- Recipient -->
+        <div class="form-floating mb-3">
+            <input
+                id="recipient"
+                name="recipient"
+                type="email"
+                class="form-control input-field"
+                placeholder="Recipient Email"
+                required
+            />
+            <label for="recipient" class="input-label">To</label>
+        </div>
+
+        <!-- Subject -->
+        <div class="form-floating mb-3">
+            <input
+                id="subject"
+                name="subject"
+                type="text"
+                class="form-control input-field"
+                placeholder="Email Subject"
+                required
+            />
+            <label for="subject" class="input-label">Subject</label>
+        </div>
+
+        <!-- Message Body -->
+        <div class="form-floating mb-3">
+            <textarea
+                id="body"
+                name="body"
+                class="form-control input-field"
+                placeholder="Write your message here..."
+                style="height: 150px;"
+                required
+            ></textarea>
+            <label for="body" class="input-label">Message</label>
+        </div>
+
+        <!-- Send Button -->
+        <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary btn-custom">Send</button>
+        </div>
+    </form>
+</div>
